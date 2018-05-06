@@ -158,9 +158,13 @@ hr{
    
 }
 
-.icon{
+.icon {
+ margin: 0 auto;    
+}
+
+.icon img{
     max-width: 50px;
-    margin: 0 auto;
+    
     
 }
 
