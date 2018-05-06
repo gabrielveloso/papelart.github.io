@@ -1,0 +1,17 @@
+{
+  "name": "paginapapelart",
+  "authors": [
+    "gabrielveloso <gabrielveloso2@gmail.com>"
+  ],
+  "description": "pagina",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Papelart Festas Recife - Artigos em papel para festas.</title>
+    <meta class="description" content="Papelaria personalizada para festas, vários temas e modelos!">
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Papelart Festas Recife - Artigos em papel para festas" />
+    <meta property="og:description" content="Papelaria personalizada para festas, vários temas e modelos" />
+    <meta property="og:url" content="http://papelartrecife.com.br" />
+    <meta property="og:image" content="http://papelartrecife.com.br/logo_sombra.png" />
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Social-feed css -->
+    <link href="/bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
+    <!-- font-awesome for social network icons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href='style.css'>
+    
+<style>
+
+</style>
+
+<body>
+   <div>
+   <section id="navegacao">
+     <div class="nav container">      
+       <div class="logo"><img src="catavento.png"  alt="Logo da papelart"></div>
+       <nav><ul>
+           <li><a href="#home" >HOME</a></li>
+           <li><a href="#servicos" >SERVIÇOS</a></li>
+           <li><a href="#trabalhos" >TRABALHOS</a></li>
+           <li><a href="#contatos" >CONTATOS</a></li>
+       </ul></nav>
+     </div>
+   </section>
+   
+   <section id="main" >
+      <div id="logo" class="container">
+         <div class="logo-centro">
+          <img id="logo-centro" src="logo_sombra.png" alt="imagem mesa de fundo">
+          <h1>Sua papelaria personalizada em Recife!</h1>  
+         </div>    
+             
+      </div>
+       
+   </section>
+   
+   <section id="servicos" >
+     <div class="container">
+      <h3>SERVIÇOS</h3>
+      <hr>
+      <div class="serv">
+         <div class="navimg">
+          <img src="https://festas.site/wp-content/uploads/2017/09/decoracao-de-festa-infantil-simples-45.jpg" alt="">
+          </div>
+          <div id="lista"><ul>
+              <li>Forminhas para doces e salgados</li>
+              <li>Caixinhas personalizadas</li>
+              <li>Decoração de festas</li>
+              <li>Caixas para presentes</li>
+              <li>Letras em 3d</li>
+              <li>Letreiros em papel</li>
+          </ul></div>
+          
+      </div>
+      </div>
+       
+   </section>
+   
+   <section id="trabalhos" >
+        <div class="container">
+            <h3>TRABALHOS</h3>   
+            <hr>
+            <div class="social-feed-container"></div>  
+        </div>   
+   </section>
+   
+   <section id="contatos" >
+        <div class="container">
+            <h3>CONTATOS</h3>
+            <hr>   
+            <p><strong>Email:</strong> gabrielveloso2@gmail.com</p>
+            <p><strong>telefone</strong>: 81 998653811</p> 
+            <H5>Endereço: Jardim São Paulo, Recife, PE</H5>
+            <div class="icon"><a href="https://www.instagram.com/gveloso2/">
+                <img src="instagram-512.png" alt="icone do instagram da papelart">
+            </a></div>
+        </div>   
+   </section>
+    
+   <footer id="desenvolvido">
+      <div class="container">
+       <h5>&copy; copyright - Desenvolvido por <a href="http://gabrielveloso.github.io">Gabriel Azuirson</a></h5>
+       </div>
+   </footer>
+   </div>
+   <!-- jQuery -->
+   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <!-- Codebird.js - required for TWITTER -->
+    <script src="./bower_components/codebird-js/codebird.js"></script>
+    <!-- doT.js for rendering templates -->
+    <script src="./bower_components/doT/doT.min.js"></script>
+    <!-- Moment.js for showing "time ago" and/or "date"-->
+    <script src="./bower_components/moment/min/moment.min.js"></script>
+    <!-- Moment Locale to format the date to your language (eg. italian lang)-->
+    <script src="./bower_components/moment/locale/it.js"></script>
+    <!-- Social-feed js -->
+    <script src="./bower_components/social-feed/js/jquery.socialfeed.js"></script>   
+    
+    <script>
+        
+    $(document).ready(function(){
+        $('.social-feed-container').socialfeed({
+            // INSTAGRAM
+            instagram:{
+                accounts: ['&7644375105'],  //Array: Specify a list of accounts from which to pull posts
+                limit: 10,                                    //Integer: max number of posts to load
+                client_id: 'c0f2127e74e24bb984875aaa7f0f3e10',       //String: Instagram client id (optional if using access token)
+                access_token: '7644375105.1677ed0.2299ff4953db4f6a8cdbcf95cdc1a41c' //String: Instagram access token
+            },
+
+            // GENERAL SETTINGS
+            length:400,                                     //Integer: For posts with text longer than this length, show an ellipsis.
+            show_media:true,                                //Boolean: if false, doesn't display any post images
+            
+            template: "bower_components/social-feed/template.html",                         //String: Filename used to get the post 
+            moderation: function(content) {                 //Function: if returns false, template will have class hidden
+                return  (content.text) ? content.text.indexOf('fuck') == -1 : true;
+            },
+            callback: function() {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
+                console.log("All posts collected!");
+            }                      //Integer: For posts with text longer than this length, show an ellipsis.
+        });
+    });
+    </script>   
+
+
+<script>
+    $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>   
+</body>
+</html>
