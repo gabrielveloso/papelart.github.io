@@ -11,9 +11,16 @@ body {
 
 
 .container {
-    max-width: 1200px;
+    max-width: 300px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+ .container {    
+    max-width: 1200px; 
+  }
+    
 }
 
 a, a:visited, a:hover, a:active {
@@ -162,8 +169,6 @@ hr{
    color:#ba007c;
     padding: 30px 0px 60px 0px;
 }
-
-
 
 #desenvolvido {
     text-align: right;
