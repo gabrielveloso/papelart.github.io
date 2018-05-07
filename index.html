@@ -198,6 +198,26 @@
       }
     }
   });
+    
+  $('#navegacao li a').click(function (event) {
+      /*console.log($(this).scrollTop());
+      $(this).scrollTop(100);
+    var y = $($(this).attr('href')).scrollTop();
+      console.log(y);
+      console.log($(this).attr('href'));
+       $($(this).attr('href')).scrollTop(y-100);*/
+      $('html, body').animate({scrollTop: '-=70px'}, 800);
+        
+  });
+                        
+  $( window ).scroll(function() {
+    $( ".logo" ).css( "max-width", "60px" );
+      //console.log($(window).scrollTop());
+      if($(window).scrollTop() == 0){
+          
+         $( ".logo" ).css( "max-width", "100px" ); 
+      }
+  });
 </script>   
 </body>
 </html>
