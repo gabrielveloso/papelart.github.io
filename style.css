@@ -101,8 +101,14 @@ ul li:hover{
 
 
 
+
 #servicos{
     background-color: white;        
+}
+
+#servicos img {
+    display: block;
+    margin: 0 auto;
 }
 
 section {
